@@ -17,16 +17,17 @@ const fade = {
 export default function Hero() {
   return (
     <section id="top" className="relative h-dvh min-h-[720px] overflow-hidden">
-      <video
-        className="absolute inset-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster="/stills/ring.jpg"
-      >
-        <source src="/hero.mp4" type="video/mp4" />
-      </video>
+      <div className="ring-stage absolute inset-0">
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/hero.mp4" type="video/mp4" />
+        </video>
+      </div>
       <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/25" />
       <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/50" />
       <div className="absolute inset-0 scanline opacity-30" />
@@ -39,7 +40,7 @@ export default function Hero() {
           animate="show"
           className="mb-5 font-mono text-[11px] tracking-[0.42em] text-led uppercase"
         >
-          Non-invasive · Optical · Thermal
+          Non-invasive · Optical · Impedance · Thermal
         </motion.p>
         <motion.h1
           custom={1}
@@ -59,9 +60,9 @@ export default function Hero() {
           animate="show"
           className="mt-7 max-w-xl text-base leading-relaxed text-mist md:text-lg"
         >
-          GlucoEdge is a finger-worn sensor that estimates blood sugar from
-          infrared photoplethysmography and skin temperature — then checks every
-          prediction against a clinical fingerstick glucometer.
+          GlucoEdge is a thick, light-sealed ring that fuses optical PPG,
+          electrical impedance, and skin temperature into a glucose band you
+          can act on — without a drop of blood.
         </motion.p>
         <motion.div
           custom={3}
@@ -76,18 +77,24 @@ export default function Hero() {
           >
             See the system
           </a>
+          <a
+            href="#poc"
+            className="text-[12px] font-semibold tracking-[0.22em] text-led uppercase"
+          >
+            See the prototype →
+          </a>
           <div className="flex gap-10 font-mono text-[11px] tracking-[0.18em] text-mist uppercase">
             <div>
-              <div className="text-white">IR 880 nm</div>
-              <div className="mt-1 text-led/80">Optical path</div>
+              <div className="text-white">Optical</div>
+              <div className="mt-1 text-led/80">PPG + NIR</div>
             </div>
             <div>
-              <div className="text-white">DS18B20</div>
-              <div className="mt-1 text-led/80">Thermal path</div>
+              <div className="text-white">Thermal</div>
+              <div className="mt-1 text-led/80">Skin path</div>
             </div>
             <div>
-              <div className="text-white">vs glucometer</div>
-              <div className="mt-1 text-led/80">Ground truth</div>
+              <div className="text-white">Impedance</div>
+              <div className="mt-1 text-led/80">Tissue EIS</div>
             </div>
           </div>
         </motion.div>

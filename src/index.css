@@ -8,6 +8,7 @@
   --color-led: #3dff8a;
   --color-cyan: #7ee7ff;
   --color-gold: #c4a574;
+  --color-warn: #ff6b6b;
   --color-mist: #9aa3ad;
   --color-line: rgba(125, 211, 252, 0.18);
 }
@@ -68,4 +69,29 @@ body {
     transparent 2px,
     rgba(0, 0, 0, 0.12) 3px
   );
+}
+
+.ring-stage {
+  background:
+    radial-gradient(ellipse at 36% 24%, rgba(255, 255, 255, 0.06), transparent 34%),
+    radial-gradient(ellipse at 40% 38%, rgba(61, 255, 138, 0.1), transparent 46%),
+    linear-gradient(165deg, #10161d 0%, #070b10 58%, #050608 100%);
+}
+
+.hud-stage {
+  background:
+    radial-gradient(ellipse at 72% 28%, rgba(61, 255, 138, 0.14), transparent 36%),
+    linear-gradient(180deg, #0e151c 0%, #070b10 100%);
+}
+
+.exploded-stage {
+  background:
+    radial-gradient(ellipse at 50% 48%, rgba(126, 231, 255, 0.08), transparent 50%),
+    linear-gradient(180deg, #0c1218, #06080c);
+}
+
+.pcb-stage {
+  background:
+    radial-gradient(ellipse at 22% 40%, rgba(215, 196, 163, 0.08), transparent 42%),
+    linear-gradient(180deg, #0d141c, #080c10);
 }

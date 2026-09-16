@@ -6,12 +6,12 @@ export default function Footer() {
           <div className="text-[13px] font-semibold tracking-[0.28em]">GLUCOEDGE</div>
           <p className="mt-3 max-w-md text-sm text-mist">
             Research prototype. Not a medical device. Not for diagnosis or
-            treatment. Glucose values on this site are illustrative POC
-            comparisons against a fingerstick glucometer.
+            treatment. Product pages describe the envisioned ring. Prototype
+            telemetry and glucose values on this site are illustrative.
           </p>
         </div>
         <div className="font-mono text-[11px] tracking-[0.18em] text-mist uppercase">
-          IR · Temp · Model · Truth
+          Optical · Pulse · Thermal · Band
         </div>
       </div>
     </footer>

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const links = [
   { href: "#architecture", label: "Architecture" },
   { href: "#model", label: "Model" },
-  { href: "#poc", label: "POC" },
+  { href: "#poc", label: "Prototype" },
 ];
 
 export default function Navbar() {
@@ -39,7 +39,7 @@ export default function Navbar() {
           href="#poc"
           className="rounded-full border border-led/40 bg-led/10 px-4 py-1.5 text-[11px] tracking-[0.2em] text-led uppercase"
         >
-          Prototype
+          See the prototype
         </a>
       </div>
     </motion.header>

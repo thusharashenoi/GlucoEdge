@@ -1,6 +1,6 @@
 # GlucoEdge
 
-Marketing site and research tooling for **GlucoEdge** — a finger-worn sensor that estimates blood glucose from infrared and thermal signatures, validated against a clinical fingerstick glucometer.
+Marketing site and research tooling for **GlucoEdge** — a finger-worn ring that fuses near-infrared light, pulse, and skin temperature into a glucose band. The public site pitches the product and showcases the NIO-GM hardware prototype.
 
 **Live site:** [https://glucoedge.vercel.app](https://glucoedge.vercel.app)
 
@@ -9,9 +9,10 @@ Marketing site and research tooling for **GlucoEdge** — a finger-worn sensor t
 GlucoEdge combines:
 
 - **NIR + PPG optics** — dual near-infrared LEDs with an InGaAs photodiode, plus a MAX30102 for red/IR PPG
+- **Pulse** — HBT V2 analog heart-rate PPG
 - **Thermal sensing** — DS18B20 skin temperature
-- **On-device inference** — a lightweight model maps sensor features to glucose estimates
-- **POC validation** — side-by-side comparison against fingerstick reference readings
+- **On-device inference** — a lightweight model maps fused features to a glucose band (plus an illustrative mg/dL head)
+- **Prototype bench** — ESP32-S3 NIO-GM fixture used to demonstrate the sensing chain for the ring
 
 This repository contains the public-facing website, Arduino firmware for the NIO-GM prototype, and a Python serial data collector.
 
@@ -19,7 +20,7 @@ This repository contains the public-facing website, Arduino firmware for the NIO
 
 | Layer | Stack |
 | --- | --- |
-| Website | React 19, TypeScript, Vite 7, Tailwind CSS 4, Framer Motion |
+| Website | React 19, TypeScript, Vite 6, Tailwind CSS 4, Framer Motion |
 | Firmware | ESP32-S3 (Arduino), MAX30102, ADS1115, DS18B20 |
 | Tooling | Python 3, pyserial |
 
@@ -109,7 +110,7 @@ After linking, pushes to `main` trigger production deploys; pull requests get pr
 
 ## Disclaimer
 
-Research prototype only. **Not a medical device.** Not for diagnosis or treatment. Glucose values shown on the site are illustrative POC comparisons against a fingerstick glucometer.
+Research prototype only. **Not a medical device.** Not for diagnosis or treatment. Current emitters do not reach the 1500–1700 nm glucose combination band. Glucose values and metrics on the prototype pages are illustrative mock windows with real sensor units.
 
 ## License
 

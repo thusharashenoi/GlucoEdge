@@ -5,6 +5,7 @@ import Architecture from "./components/Architecture";
 import Algorithm from "./components/Algorithm";
 import POC from "./components/POC";
 import Footer from "./components/Footer";
+import SectionNav from "./components/SectionNav";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <POC />
       </main>
       <Footer />
+      <SectionNav />
     </div>
   );
 }
